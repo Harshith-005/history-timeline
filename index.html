@@ -1,32 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>History Timeline</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>History Timeline — Home</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">History Timeline</div>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="timeline.html">Timeline</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="index.html">History<span>Timeline</span></a>
+      <nav class="main-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="timeline.html">Timeline</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Open navigation">☰</button>
+    </div>
+  </header>
 
+  <main>
     <section class="hero">
+      <div class="hero-inner wrap">
         <h1>Journey Through Time</h1>
-        <p>Explore the most remarkable events in history.</p>
-        <a href="timeline.html" class="btn">View Timeline</a>
+        <p class="lead">Explore pivotal moments in human history — beautifully presented, mobile friendly, and easy to extend.</p>
+        <a class="btn" href="timeline.html">Explore Timeline</a>
+      </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 History Timeline Project. All Rights Reserved.</p>
-    </footer>
+    <section class="featured wrap" aria-labelledby="featured-title">
+      <h2 id="featured-title">Featured Events</h2>
+      <div class="cards">
+        <article class="card">
+          <img src="images/event1.jpg" alt="Wright brothers flight">
+          <div class="card-body">
+            <h3><a href="event1.html">1903 — Wright Brothers' First Flight</a></h3>
+            <p>First controlled, sustained, powered flight at Kitty Hawk — birth of aviation.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/event2.jpg" alt="Moon landing">
+          <div class="card-body">
+            <h3><a href="event2.html">1969 — Apollo 11 Moon Landing</a></h3>
+            <p>Apollo 11 carried humans to the lunar surface for the first time.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/event3.jpg" alt="Berlin wall">
+          <div class="card-body">
+            <h3><a href="event3.html">1989 — Fall of the Berlin Wall</a></h3>
+            <p>The opening of the Berlin Wall signaled the end of Cold War divisions in Europe.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© 2025 History Timeline — Built by Harshith. <small>Learn Git, build fast.</small></p>
+    </div>
+  </footer>
+
+  <script>
+    // simple nav toggle for mobile
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.main-nav');
+    btn && btn.addEventListener('click', ()=> {
+      nav.classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
