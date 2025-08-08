@@ -8,35 +8,52 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
-      <h1 class="logo"><a href="index.html">History Timeline</a></h1>
+    <div class="wrap">
+      <a class="logo" href="index.html">History<span>Timeline</span></a>
       <nav class="main-nav">
         <a href="index.html">Home</a>
         <a href="timeline.html">Timeline</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </nav>
+      <button class="nav-toggle" aria-label="Open navigation">☰</button>
     </div>
   </header>
 
-  <main class="container">
-    <article class="event-page">
-      <h2>1903 — Wright Brothers' First Flight</h2>
-      <img src="images/event1.jpg" alt="Wright Flyer" class="event-image">
-      <p><strong>Date:</strong> December 17, 1903</p>
-      <p>On December 17, 1903, Orville and Wilbur Wright achieved the first controlled, sustained flight of a powered, heavier-than-air aircraft at Kitty Hawk, North Carolina.</p>
+  <main>
+    <section class="hero event-hero" style="background-image:url('images/event1.jpg')">
+      <div class="hero-inner wrap">
+        <h1>1903 — Wright Brothers' First Flight</h1>
+        <p class="lead">December 17, 1903 — the first sustained powered flight.</p>
+      </div>
+    </section>
 
-      <h3>Why it matters</h3>
-      <p>This event marks the beginning of powered aviation and opened the door to modern air travel and aeronautical engineering.</p>
+    <section class="wrap article">
+      <article>
+        <h2>Overview</h2>
+        <p>The Wright brothers — Orville and Wilbur — flew the first controlled, heavier-than-air, powered aircraft at Kitty Hawk, North Carolina. Their work laid the foundation for modern aeronautics.</p>
 
-      <p><a class="btn" href="timeline.html">Back to timeline</a></p>
-    </article>
+        <h3>Key facts</h3>
+        <ul>
+          <li><strong>Date:</strong> December 17, 1903</li>
+          <li><strong>Location:</strong> Kitty Hawk, North Carolina</li>
+          <li><strong>Significance:</strong> Beginning of powered flight and aviation industry.</li>
+        </ul>
+
+        <h3>Impact</h3>
+        <p>This achievement accelerated developments in transportation, military technology, and global travel — reshaping 20th century society.</p>
+
+        <p><a class="btn" href="timeline.html">Back to timeline</a></p>
+      </article>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 History Timeline Project</p>
+    <div class="wrap">
+      <p>© 2025 History Timeline.</p>
     </div>
   </footer>
+
+  <script>document.querySelector('.nav-toggle')?.addEventListener('click', ()=> document.querySelector('.main-nav').classList.toggle('open'))</script>
 </body>
 </html>
