@@ -8,33 +8,49 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
-      <h1 class="logo"><a href="index.html">History Timeline</a></h1>
+    <div class="wrap">
+      <a class="logo" href="index.html">History<span>Timeline</span></a>
       <nav class="main-nav">
         <a href="index.html">Home</a>
         <a href="timeline.html">Timeline</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </nav>
+      <button class="nav-toggle" aria-label="Open navigation">☰</button>
     </div>
   </header>
 
-  <main class="container">
-    <article class="event-page">
-      <h2>1969 — Apollo 11 Moon Landing</h2>
-      <img src="images/event2.jpg" alt="Moon Landing" class="event-image">
-      <p><strong>Date:</strong> July 20, 1969</p>
-      <p>Apollo 11 landed on the Moon and astronauts Neil Armstrong and Buzz Aldrin became the first humans to walk on the lunar surface.</p>
-      <h3>Why it matters</h3>
-      <p>A major achievement for science, engineering, and human exploration — and a key moment in the Space Race.</p>
-      <p><a class="btn" href="timeline.html">Back to timeline</a></p>
-    </article>
+  <main>
+    <section class="hero event-hero" style="background-image:url('images/event2.jpg')">
+      <div class="hero-inner wrap">
+        <h1>1969 — Apollo 11 Moon Landing</h1>
+        <p class="lead">July 20, 1969 — humans walked on the Moon for the first time.</p>
+      </div>
+    </section>
+
+    <section class="wrap article">
+      <article>
+        <h2>Overview</h2>
+        <p>Apollo 11 was the spaceflight that first landed humans on the Moon. Commander Neil Armstrong and lunar module pilot Buzz Aldrin formed the American crew that landed the Apollo Lunar Module Eagle on July 20, 1969.</p>
+
+        <h3>Key facts</h3>
+        <ul>
+          <li><strong>Date:</strong> July 20, 1969</li>
+          <li><strong>Astronauts:</strong> Neil Armstrong, Buzz Aldrin, Michael Collins</li>
+          <li><strong>Significance:</strong> Major milestone in space exploration.</li>
+        </ul>
+
+        <p><a class="btn" href="timeline.html">Back to timeline</a></p>
+      </article>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 History Timeline Project</p>
+    <div class="wrap">
+      <p>© 2025 History Timeline.</p>
     </div>
   </footer>
+
+  <script>document.querySelector('.nav-toggle')?.addEventListener('click', ()=> document.querySelector('.main-nav').classList.toggle('open'))</script>
 </body>
 </html>
