@@ -8,50 +8,65 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
-      <h1 class="logo"><a href="index.html">History Timeline</a></h1>
+    <div class="wrap">
+      <a class="logo" href="index.html">History<span>Timeline</span></a>
       <nav class="main-nav">
         <a href="index.html">Home</a>
-        <a href="timeline.html">Timeline</a>
+        <a href="timeline.html" class="active">Timeline</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </nav>
+      <button class="nav-toggle" aria-label="Open navigation">☰</button>
     </div>
   </header>
 
-  <main class="container">
-    <h2>Chronological Timeline</h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <time>1903</time>
-        <div class="timeline-content">
-          <h3><a href="event1.html">Wright Brothers' First Flight</a></h3>
-          <p>December 17, 1903 — Orville and Wilbur Wright complete the first powered flight.</p>
-        </div>
-      </div>
+  <main>
+    <section class="wrap timeline-intro">
+      <h1>Chronological Timeline</h1>
+      <p class="lead">Browse events arranged by year. Click any card to read full details.</p>
+    </section>
 
-      <div class="timeline-item">
-        <time>1969</time>
-        <div class="timeline-content">
+    <section class="timeline wrap" aria-label="Historical events">
+      <article class="timeline-card">
+        <div class="thumb"><img src="images/event1.jpg" alt=""></div>
+        <div class="content">
+          <time>1903</time>
+          <h3><a href="event1.html">Wright Brothers' First Flight</a></h3>
+          <p>December 17, 1903 — Orville and Wilbur Wright made the first controlled powered flight.</p>
+        </div>
+      </article>
+
+      <article class="timeline-card">
+        <div class="thumb"><img src="images/event2.jpg" alt=""></div>
+        <div class="content">
+          <time>1969</time>
           <h3><a href="event2.html">Apollo 11 Moon Landing</a></h3>
           <p>July 20, 1969 — Neil Armstrong and Buzz Aldrin walk on the Moon.</p>
         </div>
-      </div>
+      </article>
 
-      <div class="timeline-item">
-        <time>1989</time>
-        <div class="timeline-content">
+      <article class="timeline-card">
+        <div class="thumb"><img src="images/event3.jpg" alt=""></div>
+        <div class="content">
+          <time>1989</time>
           <h3><a href="event3.html">Fall of the Berlin Wall</a></h3>
-          <p>November 9, 1989 — The wall separating East and West Germany is opened.</p>
+          <p>November 9, 1989 — Opening of the wall between East and West Berlin.</p>
         </div>
-      </div>
-    </div>
+      </article>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 History Timeline Project</p>
+    <div class="wrap">
+      <p>© 2025 History Timeline — Built by Harshith.</p>
     </div>
   </footer>
+
+  <script>
+    // mobile nav
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.main-nav');
+    btn && btn.addEventListener('click', ()=> nav.classList.toggle('open'));
+  </script>
 </body>
 </html>
